@@ -1,0 +1,63 @@
+
+.box {
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    border: 10px;
+    border-radius: 5px;
+
+
+}
+
+.key-container {
+    display: inline-block;
+    background: rgb(40, 40, 40);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.key {
+    position: relative;
+    background: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.key:active {
+    background: blue;
+}
+
+.key-wide {
+    display: inline-block;
+    background: #d81a00;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.key-mesa {
+    display: inline-block;
+    background: #f45519;
+    padding: 12px;
+    border-radius: 24px;
+
+    background:
+        /* Inner background */
+        linear-gradient(to bottom right, #FF9764, #8C0001) padding-box,
+
+        /* Border gradient */
+        linear-gradient(
+            to bottom,
+            blue,
+            #ff9764,
+            #cc1a00
+        ) border-box;
+}
+
+.key-face {
+    display: inline-block;
+    background:green;
+    padding: 60px;
+    border-radius: 22px;
+}
