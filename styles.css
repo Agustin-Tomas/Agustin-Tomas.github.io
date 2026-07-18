@@ -137,7 +137,7 @@
 }
 
 .label {
-display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -177,19 +177,124 @@ display: flex;
 /*                    <span class="pushbutton-label">*/
 /*                        Button*/
 
+
+
 .pushbutton-frame {
-    display: inline-block;
-    background: white;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 9999px;
+    background: red;
+
+    z-index: 0;
 }
 
-.pushbutton {}
+.pushbutton-frame:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: inherit;
+    background:
+        linear-gradient(to bottom, #4f5153, #25A6DC);
 
-.pushbutton-base {}
+    z-index: -1;
+}
 
-.pushbutton-face {}
+.pushbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    padding: 4px;
+    width: 500px;
+    height: 100px;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    background: linear-gradient(to top, rgba(0, 0 ,0, 1), rgba(40, 40, 40, 1));
 
-.pushbutton-label {}
+
+    z-index: 1;
+}
+.pushbutton:active {
+    background: orange;
+}
+
+.pushbutton-base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 9999px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 0.5px;
+    padding-left: 0.5px;
+    background:
+        linear-gradient(to bottom, #ffc4b9, #ab3d18);
+}
+
+.pushbutton-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+
+    width: 99%;
+    height: 99%;
+    border: none;
+    border-radius: 9999px;
+    padding: 5px;
+
+    background:
+        linear-gradient(to bottom, #f54412 0%, #fc530d 20%, #ff7613 70%);
+
+}
+
+.pushbutton-label {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 70%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: lighter;
+    text-shadow:
+        0 -3px 1px #e55c2d,  /* top highlight */
+        0 2px 2px #7b3f24;       /* bottom shade */
+}
 
 
 
