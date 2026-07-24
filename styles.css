@@ -60,6 +60,7 @@
 }
 
 
+
 .rubber-button {
     display: flex;
     justify-content: center;
@@ -183,28 +184,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
-    width: 100px;
-    height: 100px;
-    padding: 20px;
+    width: 410;
+    height: 110px;
+    padding: 0px;
     border-radius: 9999px;
-    background: red;
+
+/*    background:*/
+/*        linear-gradient(to bottom, #166bc0, #25A6DC);*/
+
+/*    background: #2b2b2b;*/
+    border-radius: 9999px;
+
+/*    box-shadow:*/
+/*        inset 0 3px 4px rgba(0,0,0,0.7),        dark top */
+/*        inset 0 -2px 3px rgba(255,255,255,0.08);  light bottom */
+
+
+    box-shadow:
+        0  10px 12px rgba(0,0,0,0.88),
+        0 -10px 12px rgba(255,255,255,0.18);
 
     z-index: 0;
 }
 
-.pushbutton-frame:before {
+.pushbutton-frame::before {
     content: "";
     position: absolute;
     inset: 0;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
     border-radius: inherit;
-    background:
-        linear-gradient(to bottom, #4f5153, #25A6DC);
+/*    transform: translate(-50%, -50%);*/
+    background: red;
+/*        linear-gradient(to bottom, #4f5153, #25A6DC);*/
+
+    filter: blur(10px);
 
     z-index: -1;
 }
@@ -221,10 +235,9 @@
     border: none;
     border-radius: 9999px;
     cursor: pointer;
+
     background: linear-gradient(to top, rgba(0, 0 ,0, 1), rgba(40, 40, 40, 1));
 
-
-    z-index: 1;
 }
 .pushbutton:active {
     background: orange;
@@ -249,6 +262,7 @@
     padding-left: 0.5px;
     background:
         linear-gradient(to bottom, #ffc4b9, #ab3d18);
+
 }
 
 .pushbutton-face {
